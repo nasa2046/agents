@@ -1,0 +1,126 @@
+---
+name: 新子代理提案
+description: 为集合提出一个新的专业化子代理
+title: "[新代理] "
+labels: ["new-subagent"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提出新的子代理提案！高质量的子代理
+        需要精心设计和明确的专业化。
+
+        **重要提示**：仅提出用于合法、
+        建设性用例的子代理。恶意或有害
+        功能的提案将被拒绝，并可能导致审核措施。
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: 初步检查
+      description: 请确认您已完成这些步骤
+      options:
+        - label: 我已阅读[行为准则](.github/CODE_OF_CONDUCT.md)
+          required: true
+        - label: >-
+            我已审查现有子代理以确保这不是重复提案
+          required: true
+        - label: 此提案仅用于合法、建设性用例
+          required: true
+        - label: 我在所提议的领域具有专业知识
+          required: true
+
+  - type: input
+    id: agent-name
+    attributes:
+      label: 提议的代理名称
+      description: 这个子代理应该叫什么？
+      placeholder: 例如：blockchain-developer, devops-security 等
+    validations:
+      required: true
+
+  - type: textarea
+    id: domain-expertise
+    attributes:
+      label: 领域专业知识
+      description: >-
+        这个代理专注于哪个特定领域或技术？
+      placeholder: 此代理专注于...
+    validations:
+      required: true
+
+  - type: textarea
+    id: unique-value
+    attributes:
+      label: 独特价值主张
+      description: >-
+        这与现有子代理有何不同？
+        它提供什么独特功能？
+      placeholder: 与现有代理不同，这个代理将...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 主要用例
+      description: 这个代理将处理哪些特定任务？
+      placeholder: |
+        1. 设计和实现...
+        2. 优化...的性能
+        3. 调试与...相关的问题
+        4. 审查...的代码
+    validations:
+      required: true
+
+  - type: textarea
+    id: tools-capabilities
+    attributes:
+      label: 所需工具和功能
+      description: 这个代理需要什么工具和功能？
+      placeholder: |
+        - 用于...的文件操作
+        - 用于...的Bash命令
+        - ...的专业知识
+        - 与...的集成
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: 示例交互
+      description: >-
+        提供2-3个示例交互，展示用户将
+        如何与此代理一起工作
+      placeholder: |
+        **示例1：**
+        用户："实现...的智能合约"
+        代理响应："我将创建一个具有...的安全智能合约"
+
+        **示例2：**
+        用户："优化这个区块链查询..."
+        代理响应："让我分析查询并提出优化建议..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expertise-evidence
+    attributes:
+      label: 您的专业知识
+      description: >-
+        您在这个领域有什么经验或资质？
+      placeholder: >-
+        我在...方面有X年的经验。我曾与...合作
+        我持有...的认证
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加上下文
+      description: >-
+        任何其他相关信息、资源或考虑因素
+      placeholder: >-
+        相关文档、类似工具、潜在挑战...

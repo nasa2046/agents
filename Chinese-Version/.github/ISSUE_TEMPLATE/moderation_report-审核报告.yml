@@ -1,0 +1,118 @@
+---
+name: Moderation Report
+description: >-
+  报告不适当内容、行为或行为准则违规
+title: "[MODERATION] "
+labels: ["moderation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **⚠️ 使用此模板报告我们的行为准则违规、
+        不适当内容或令人担忧的行为。**
+
+        所有报告将被认真对待，并由维护者审查。
+        虚假报告可能导致审核行动。
+
+        **对于紧急安全问题或严重违规，您也可以使用
+        GitHub的内置报告工具。**
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: 报告指南
+      description: 请确认您理解这些指南
+      options:
+        - label: 我正在报告行为准则的真实违规
+          required: true
+        - label: 我理解虚假报告可能导致审核行动
+          required: true
+        - label: >-
+            我已尝试通过直接
+            沟通解决轻微问题（如果适用）
+          required: false
+
+  - type: dropdown
+    id: violation-type
+    attributes:
+      label: 违规类型
+      description: 您正在报告什么类型的不适当行为？
+      options:
+        - 仇恨言论或歧视性语言
+        - 人身攻击或骚扰
+        - 垃圾信息或离题内容
+        - 不适当或冒犯性内容
+        - 威胁或恐吓
+        - 泄露隐私或隐私违规
+        - 冒充
+        - 其他行为准则违规
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 违规位置
+      description: >-
+        这发生在哪里？（问题编号、PR、评论链接等）
+      placeholder: 例如，Issue #123、PR #456、issue #789 中的评论
+    validations:
+      required: true
+
+  - type: input
+    id: user-involved
+    attributes:
+      label: 涉及用户
+      description: >-
+        涉及人员（如果已知）的GitHub用户名
+      placeholder: 例如，@username1、@username2
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 违规描述
+      description: >-
+        发生什么以及为什么违反
+        我们行为准则的详细描述
+      placeholder: 请提供有关违规的具体细节...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据
+      description: 任何附加证据（引述、截图等）
+      placeholder: |
+        您可以包括：
+        - 直接引述（使用 > 表示块引用）
+        - 特定评论的链接
+        - 截图（在此处拖放图像）
+        - 违规发生的时间戳
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: 影响
+      description: 这如何影响您或社区？
+      placeholder: >-
+        此行为让我感到... 它通过... 影响社区
+
+  - type: checkboxes
+    id: previous-reports
+    attributes:
+      label: 先前报告
+      options:
+        - label: 这是我第一次报告此用户/行为
+        - label: 我之前报告过此用户/行为
+
+  - type: markdown
+    attributes:
+      value: |
+        **接下来会发生什么：**
+        - 维护者将在24-48小时内审查您的报告
+        - 如有需要，我们可能会跟进问题
+        - 我们将根据我们的行为准则采取适当行动
+        - 在可能的情况下，我们将更新您关于解决结果
+
+        感谢您帮助维护一个尊重的社区。

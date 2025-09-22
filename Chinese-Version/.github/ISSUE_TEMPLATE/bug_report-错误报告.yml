@@ -1,0 +1,74 @@
+---
+name: Bug Report
+description: 报告现有子代理的错误或问题
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您报告错误！请填写此模板以帮助我们理解和解决问题。
+
+        **重要**：此模板仅用于技术错误。
+        对于问题、讨论或一般反馈，请改用
+        GitHub Discussions。
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: 初步检查
+      description: 请确认您已完成这些步骤
+      options:
+        - label: 我已阅读[行为准则](../CODE_OF_CONDUCT-行为准则.md)
+          required: true
+        - label: >-
+            我已搜索现有问题以确保这不是重复项
+          required: true
+        - label: 此报告仅包含关于错误的的技术信息
+
+  - type: input
+    id: subagent
+    attributes:
+      label: 受影响的子代理
+      description: 哪个子代理出现问题？
+      placeholder: 例如，python-pro、frontend-developer 等。
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 错误描述
+      description: 错误清晰简洁的描述
+      placeholder: 描述意外行为...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: 重现步骤
+      description: 重现行为的步骤
+      placeholder: |
+        1. 使用子代理进行...
+        2. 提供输入...
+        3. 观察输出...
+        4. 查看错误...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 预期行为
+      description: 您期望发生什么
+      placeholder: 子代理应该...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加上下文
+      description: 任何其他上下文、截图或示例
+      placeholder: 在此处添加有关问题的任何其他上下文...
