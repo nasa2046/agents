@@ -1,0 +1,12 @@
+---
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/wshobson/agents/discussions
+    about: 用于子代理的问题、头脑风暴和一般讨论
+  - name: 社区指南
+    url: https://github.com/wshobson/agents/blob/main/.github/CODE_OF_CONDUCT-行为准则.md
+    about: 阅读我们的行为准则和社区标准
+  - name: 贡献指南
+    url: https://github.com/wshobson/agents/blob/main/.github/CONTRIBUTING-贡献指南.md
+    about: 学习如何有效贡献到这个项目
